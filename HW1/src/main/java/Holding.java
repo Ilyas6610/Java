@@ -1,11 +1,11 @@
 import java.util.Objects;
 
 public class Holding extends Client {
-    private final String CEO;
+    private final String ceo;
 
-    public Holding(String name, int inn, String CEO) {
+    public Holding(String name, int inn, String ceo) {
         super(name, inn);
-        this.CEO = CEO;
+        this.ceo = ceo;
     }
 
     @Override
@@ -14,15 +14,15 @@ public class Holding extends Client {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         Holding holding = (Holding) o;
-        return Objects.equals(CEO, holding.CEO);
+        return Objects.equals(ceo, holding.ceo);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), CEO);
+        return Objects.hash(super.hashCode(), ceo);
     }
 
     public String getCEO() {
-        return CEO;
+        return ceo;
     }
 }
